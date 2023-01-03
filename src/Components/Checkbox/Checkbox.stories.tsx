@@ -1,7 +1,7 @@
 import { Checkbox } from "./Checkbox";
 import React from "react";
 export default{
-    title:'Checkbox',
+    title:'Web Component/Checkbox',
     component:Checkbox
 }
 

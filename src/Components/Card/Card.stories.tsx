@@ -1,7 +1,7 @@
 import {Card} from "./Card";
 import React from "react";
 export default {
-    title:'Card',
+    title:'Web Component/Card',
     component:Card
 }
 

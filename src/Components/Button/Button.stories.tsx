@@ -1,16 +1,61 @@
 import { Button } from './Button';
 import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 export default{
-    title: 'Button',
-    component:Button
+    title: 'Web Component/Button',
+    component:Button,
+    args:{
+        children:"Default"
+    }
 }
 
-export const Primary = ()=><Button>Default</Button>
-export const Disabled = () =><Button disabled>Disabled</Button>
-export const Icon = ()=><Button loading>laoding</Button>
-export const Bordered = ()=><Button bordered>Default Bordered</Button>
-export const BorderedDisabled = ()=><Button bordered disabled>disabled</Button>
-export const BorderedIcon = () =><Button bordered loading>Loading</Button>
-export const TextOnly = ()=><Button textOnly>Text Only</Button>
-export const TextOnlyDisabled = ()=><Button textOnly disabled>Disabled</Button>
-export const TextOnlyIcon= ()=><Button textOnly loading>Text Only Icon</Button>
+
+
+const Template:ComponentStory<typeof Button> = (args)=><Button {...args}/>
+
+
+
+export const Primary = Template.bind({})
+
+
+export const Disabled = Template.bind({})
+Disabled.args={
+    disabled:true
+}
+
+export const Icon = Template.bind({})
+Icon.args={
+    loading:true
+}
+
+export const Bordered = Template.bind({})
+Bordered.args={
+    bordered:true
+}
+export const BorderedDisabled = Template.bind({})
+BorderedDisabled.args={
+    bordered:true,
+    disabled:true
+}
+
+export const BorderedIcon = Template.bind({})
+BorderedIcon.args={
+    bordered:true,
+    loading:true
+}
+export const TextOnly = Template.bind({})
+TextOnly.args={
+    textOnly:true
+}
+export const TextOnlyDisabled = Template.bind({})
+TextOnlyDisabled.args={
+    textOnly:true,
+    disabled:true
+}
+export const TextOnlyIcon= Template.bind({})
+
+TextOnlyIcon.args={
+    textOnly:true,
+    loading:true
+}
+
