@@ -1,8 +1,9 @@
 import { keyframes } from "@emotion/react";
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler, useContext } from "react";
 import styled from "@emotion/styled";
 import { defaultConfig } from "../DefaultModule";
-
+import { ThemeContext } from "../../Provider/ThemeProvider";
+import type ThemeTypeGenerator from '../../types/responseType'
 type ButtonProps =
   | {
     rightIcon?:never;
@@ -42,6 +43,9 @@ type ButtonProps =
   };
 
 function ButtonRaw(props: ButtonProps) {
+  // TODO:REMOVE TYPE
+  // @ts-ignore
+  const Theme:ThemeTypeGenerator = useContext(ThemeContext)
   const Spinner = keyframes`
 from {
   transform: rotate(0deg);
@@ -156,16 +160,17 @@ border-style: ${props.bordered ? `` : `none`};
     }
   `;
   return (
+    <>
     <ButtonStyle
     onMouseOver={props.onHover}
       onClick={props.onClick}
       disabled={props.disabled || props.loading}
-    >
+      >
       {props.loading ? (
         props.disabled ? (
           <>Disabled</>
-        ) : (
-          <>
+          ) : (
+            <>
             <IconHolder>
               <Icon />
             </IconHolder>
@@ -174,10 +179,11 @@ border-style: ${props.bordered ? `` : `none`};
             </LoadingText>
           </>
         )
-      ) : (
-        <>{props.children}</>
-      )}
+        ) : (
+          <>{props.children}</>
+          )}
     </ButtonStyle>
+          </>
   );
 }
 

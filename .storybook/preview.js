@@ -1,5 +1,6 @@
 import { ThemeProvider } from '../src/Provider/ThemeProvider';
 import React from 'react';
+import { MockFunction } from './Mocker';
 import { addParameters } from '@storybook/react';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 export const parameters = {
@@ -12,9 +13,11 @@ export const parameters = {
   },
 }
 
+
+
 export const decorators = [
   (Story) => (
-   <ThemeProvider style={{ margin: '3em' }}>
+   <ThemeProvider value={MockFunction()}>
       <Story />
      </ThemeProvider> 
   ),
