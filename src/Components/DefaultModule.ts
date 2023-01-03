@@ -1,0 +1,70 @@
+export const defaultConfig = {
+    P5:"#F2F8FF",
+    P10: "#E6F1FF",
+    P20: "#764EbE",
+    P90: "#E1D8F1",
+    P95: "#F0EBF8",
+    P100:"#026FFA",
+    P120:"#025ED5",
+    R10: "10px",
+    N0:"white",
+    N10:"#1C1B1F",
+    N25:"#BCBCBC",
+    N50: "#787579",
+    N55:"#4F4F4F",
+    N70:"#AEAAAE",
+    N75:"#1B1B1B",
+    N80: "#C9C5CA",
+    N90: "#E6E1E5",
+    N100: "#000000",
+    textStyle: {
+      'H5-mobile': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "15",
+      },
+      'H5-laptop': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "18",
+      },
+      'H5-desktop': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "24",
+      },
+      'H6-mobile': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "12",
+      },
+      'H6-laptop': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "15",
+      },
+      'H6-desktop': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "20",
+      },
+      'H7-mobile': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "10",
+      },
+      'H7-laptop': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "12",
+      },
+      'H7-desktop': {
+        "fontweight": "regular",
+        "fontfamily": "Lexend",
+        "fontsize": "16",
+      }
+    },
+    desktopBR: "1440px",
+    laptopBR: "744px",
+    mobileBR: "414px",
+  }

@@ -1,1 +1,2 @@
-export { ThemeProvider,ThemeContent } from "./Provider/ThemeProvider"
+export { ThemeProvider } from "./Provider/ThemeProvider"
+export { Button } from "./Components/Button/Button"
