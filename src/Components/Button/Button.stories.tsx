@@ -1,5 +1,6 @@
 import { Button } from './Button';
 import React from 'react';
+import {actions} from '@storybook/addon-actions'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 export default{
     title: 'Web Component/Button',
@@ -11,7 +12,7 @@ export default{
 
 
 
-const Template:ComponentStory<typeof Button> = (args)=><Button {...args}/>
+const Template:ComponentStory<typeof Button> = (args)=><Button {...actions('onClick','onMouseOver')} {...args}/>
 
 
 

@@ -1,7 +1,7 @@
-import { ThemeProvider } from "@emotion/react"
+import { ThemeProvider } from '../src/Provider/ThemeProvider';
 import React from 'react';
-
-
+import { addParameters } from '@storybook/react';
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -14,8 +14,14 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <div style={{ margin: '3em' }}>
+   <ThemeProvider style={{ margin: '3em' }}>
       <Story />
-    </div>
+     </ThemeProvider> 
   ),
 ];
+
+addParameters({
+  viewport:{
+    viewport:INITIAL_VIEWPORTS
+  }
+})

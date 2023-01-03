@@ -7,6 +7,7 @@ type ButtonProps =
   | {
     rightIcon?:never;
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    onHover?:MouseEventHandler<HTMLButtonElement>;
     children: string;
     bordered?: boolean;
     disabled?: boolean;
@@ -18,6 +19,7 @@ type ButtonProps =
   | {
     rightIcon?:boolean;
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    onHover?:MouseEventHandler<HTMLButtonElement>;
     children: string;
     bordered?: boolean;
     disabled?: boolean;
@@ -29,6 +31,7 @@ type ButtonProps =
   | {
     rightIcon?:boolean;
     onClick?: MouseEventHandler<HTMLButtonElement>;
+    onHover?:MouseEventHandler<HTMLButtonElement>;
     children: string;
     bordered?: never;
     disabled?: boolean;
@@ -154,6 +157,7 @@ border-style: ${props.bordered ? `` : `none`};
   `;
   return (
     <ButtonStyle
+    onMouseOver={props.onHover}
       onClick={props.onClick}
       disabled={props.disabled || props.loading}
     >
