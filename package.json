@@ -2,7 +2,7 @@
   "name": "owww",
   "version": "1.0.0",
   "license": "MIT",
-  "type": "commonjs",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",

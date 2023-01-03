@@ -3,7 +3,6 @@ import React, { MouseEventHandler, useContext } from "react";
 import styled from "@emotion/styled";
 import { defaultConfig } from "../DefaultModule";
 import { ThemeContext } from "../../Provider/ThemeProvider";
-import type ThemeTypeGenerator from '../../types/responseType'
 type ButtonProps =
   | {
     rightIcon?:never;
@@ -45,7 +44,7 @@ type ButtonProps =
 function ButtonRaw(props: ButtonProps) {
   // TODO:REMOVE TYPE
   // @ts-ignore
-  const Theme:ThemeTypeGenerator = useContext(ThemeContext)
+  const Theme = useContext(ThemeContext)
   const Spinner = keyframes`
 from {
   transform: rotate(0deg);

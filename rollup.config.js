@@ -33,6 +33,7 @@ const config = [
       commonjs(),
       typescript({
         tsconfig: "./tsconfig.json",
+        exclude: ["**/__tests__", "**/*.test.ts","**/*.stories.tsx"]
       }),
       replace({
         "process.env.NODE_ENV": JSON.stringify("development"),
