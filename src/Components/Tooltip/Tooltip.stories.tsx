@@ -2,13 +2,15 @@ import React from "react";
 import { Tooltip } from "./Tooltip";
 import { ComponentStory } from "@storybook/react";
 import { Button } from "../Button/Button";
+import { within, userEvent } from '@storybook/testing-library';
 
+import { expect } from '@storybook/jest';
 export default {
     title:"Web Component/Tooltip",
     component:Tooltip
 }
 
-const Template:ComponentStory<typeof Tooltip> = (args)=><Tooltip {...args}/>
+const Template:ComponentStory<typeof Tooltip> = (args)=><Tooltip   {...args}/>
 
 export const Default = Template.bind({})
 Default.args={
@@ -24,3 +26,4 @@ Default.decorators = [
       </div>
     ),
   ];
+

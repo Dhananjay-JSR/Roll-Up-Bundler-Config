@@ -9,5 +9,8 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/addon-viewport"
   ],
+  "features":{
+    interactionsDebugger: true,
+  },
   "framework": "@storybook/react"
 }

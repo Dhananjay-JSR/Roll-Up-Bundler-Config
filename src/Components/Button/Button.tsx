@@ -164,7 +164,7 @@ border-style: ${props.bordered ? `` : `none`};
   return (
     <>
     <ButtonStyle
-    onMouseOver={props.onHover}
+    data-testid="button-id"
       onClick={props.onClick}
       disabled={props.disabled || props.loading}
       >
