@@ -46,8 +46,8 @@ function ButtonRaw(props: ButtonProps) {
   // @ts-ignore
   const Theme = useContext(ThemeContext)
 
-  console.log("Testinbg 123")
-  console.log(Theme)
+  // console.log("Testinbg 123")
+  // console.log(Theme)
   const Spinner = keyframes`
 from {
   transform: rotate(0deg);
