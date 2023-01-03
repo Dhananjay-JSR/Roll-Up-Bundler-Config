@@ -39,7 +39,7 @@ const config = [
         "process.env.NODE_ENV": JSON.stringify("development"),
         preventAssignment:true
       }),
-      // terser()
+      terser()
     ],
   },
 
