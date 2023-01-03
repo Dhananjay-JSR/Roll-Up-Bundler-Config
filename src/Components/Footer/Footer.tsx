@@ -355,6 +355,11 @@ function Footer() {
     align-items: center;
   `;
 
+//   import logoImg from '../assets/desktop/logo.svg'
+//   import LogoTextImg from '../assets/desktop/logo-text.svg'
+//   import TwitterIcom from '../assets/desktop/twitter.svg'
+//   import LinkedInIcon from '../assets/desktop/linkedin.svg'
+//   import Instagram from '../assets/desktop/instagram.svg';
   return (
     <FooterContainer>
       <FooterTopContainer>
