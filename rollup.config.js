@@ -20,7 +20,7 @@ const config = [
         exports: "named",
       },
     ],
-    external: [,'react','react-dom',],
+    external: ['react','react-dom',/@babel\/runtime/],
     plugins: [
       peerDepsExternal(),
       nodeResolve(),
@@ -28,7 +28,7 @@ const config = [
         babelHelpers: "runtime",
         exclude: "node_modules/**",
         plugins: ["@emotion"],
-        presets: ["@babel/preset-react"],
+        presets: ["@babel/preset-env","@babel/preset-react"],
       }),
       commonjs(),
       typescript({
@@ -37,8 +37,9 @@ const config = [
       }),
       replace({
         "process.env.NODE_ENV": JSON.stringify("development"),
+        preventAssignment:true
       }),
-      terser()
+      // terser()
     ],
   },
 

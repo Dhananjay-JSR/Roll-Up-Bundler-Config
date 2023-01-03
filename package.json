@@ -1,14 +1,18 @@
 {
-  "name": "owww",
+  "name": "react-component-bundler",
   "version": "1.0.0",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "rollup -c",
     "storybook": "set NODE_OPTIONS=--openssl-legacy-provider && start-storybook -p 6006",
+    "clean": "rimraf dist",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
@@ -38,6 +42,7 @@
     "graphql-request": "^5.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rimraf": "^3.0.2",
     "rollup": "^3.9.1",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
